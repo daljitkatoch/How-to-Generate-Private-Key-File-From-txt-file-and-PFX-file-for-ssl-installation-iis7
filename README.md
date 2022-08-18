@@ -1,0 +1,1 @@
+# How-to-Generate-Private-Key-File-From-txt-file-and-PFX-file-for-ssl-installation-iis7
