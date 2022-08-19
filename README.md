@@ -2,28 +2,32 @@
 
 ## How to convert ssl private-key.txt to private.key extension
 
-Go to  https://www.openssl.org 
+### Follow these steps below
 
-Download the openssl files
+1. Go to  https://www.openssl.org 
 
-Extract the file under the folder C:\OpenSSL
+2. Download the openssl files
 
-Move C:\OpenSSL\bin\openssl.cnf to C:\OpenSSL\openssl.cnf
+3. Extract the file under the folder C:\OpenSSL
 
-Now the Opensssl is installed
+4. Move C:\OpenSSL\bin\openssl.cnf to C:\OpenSSL\openssl.cnf
 
-Now open the cmd and go to C:\OpenSSL\bin by using cd commands
+5. Now the Opensssl is installed
 
-then type openssl
+6. Now open the cmd and go to C:\OpenSSL\bin by using cd commands
 
-Now type this command
+7. then type openssl
 
-openssl> rsa -in D:\sslfiles\private-key.txt -outform pem -out D:\sslfiles\private.key
+8. Now type this command
 
-Now Private Key is Generated fom the private-key.txt to pvt-key.key
+9. openssl> rsa -in D:\sslfiles\private-key.txt -outform pem -out D:\sslfiles\private.key
+
+10. Now Private Key is Generated fom the private-key.txt to pvt-key.key
 
 ## How to convert ssl CRT file PFX extension
 
-Now create the PFX file by running following commands
+11. Now create the PFX file by running following commands
 
-pkcs12 -export -out F:\sslfiles\certi-ssl.pfx -inkey F:\sslfiles\private.key -in F:\sslfiles\cd0f163993d8bc38.crt
+12. pkcs12 -export -out D:\sslfiles\certi-ssl.pfx -inkey D:\sslfiles\private.key -in D:\sslfiles\cd0f163993d8bc38.crt
+
+13. You can find the converted file in D:\sslfiles folder location.
