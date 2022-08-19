@@ -1,5 +1,6 @@
-# How to Generate Private Key File From txt file and PFX file for ssl installation iis7
-## How to Convert private-key.txt file to private-key.key
+# How to convert ssl private-key.txt to private.key extension and PFX extension for ssl installation iis7 or iis10
+
+## How to convert ssl private-key.txt to private.key extension
 
 Go to  https://www.openssl.org 
 
@@ -17,10 +18,12 @@ then type openssl
 
 Now type this command
 
-openssl> rsa -in D:\sslfiles\private-key.txt -outform pem -out D:\sslfiles\pvt-key.key
+openssl> rsa -in D:\sslfiles\private-key.txt -outform pem -out D:\sslfiles\private.key
 
 Now Private Key is Generated fom the private-key.txt to pvt-key.key
 
+## How to convert ssl CRT file PFX extension
+
 Now create the PFX file by running following commands
 
-pkcs12 -export -out F:\sslfiles\certi-ssl.pfx -inkey F:\sslfiles\pvt-key.key -in F:\sslfiles\cd0f163993d8bc38.crt
+pkcs12 -export -out F:\sslfiles\certi-ssl.pfx -inkey F:\sslfiles\private.key -in F:\sslfiles\cd0f163993d8bc38.crt
